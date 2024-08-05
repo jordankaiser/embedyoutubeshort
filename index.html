@@ -59,6 +59,9 @@
     }
     function onPlayerStateChange(event) {
       changeBorderColor(event.data);
+      if (event.data == YT.PlayerState.ENDED) {
+        player.playVideo();
+      }
     }
 
     setTimeout(() => {
